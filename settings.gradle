@@ -19,6 +19,9 @@ rootProject.name = "choonsikdorak"
 include ":app:android"
 include ":app:wear"
 
+include ":ui:android"
+include ":ui:wear"
+
 include ":domain:auth"
 include ":domain:menu"
 include ":domain:setting"
