@@ -7,6 +7,7 @@ buildscript {
     dependencies {
         classpath(Dependency.Gradle.notation)
         classpath(Dependency.Kotlin.GradlePlugin.notation)
+        classpath(Dependency.Hilt.AndroidGradlePlugin.notation)
     }
 }
 

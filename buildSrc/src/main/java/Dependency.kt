@@ -20,6 +20,18 @@ sealed class Dependency(
         object GradlePlugin : Kotlin(name = "kotlin-gradle-plugin")
     }
 
+    sealed class Hilt(private val name: String) : Dependency(
+        group = "com.google.dagger",
+        name = name,
+        version = "2.44"
+    ) {
+        object AndroidGradlePlugin : Hilt(name = "hilt-android-gradle-plugin")
+
+        object Android : Hilt(name = "hilt-android")
+
+        object AndroidCompiler : Hilt(name = "hilt-android-compiler")
+    }
+
     sealed class Retrofit2(private val name: String) : Dependency(
         group = "com.squareup.retrofit2",
         name = name,

@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
+    id("com.google.dagger.hilt.android")
     kotlin(module = "android")
+    kotlin(module = "kapt")
 }
 
 android {
@@ -35,6 +37,14 @@ android {
 dependencies {
     implementation(Dependency.Retrofit2.Core.notation)
     implementation(Dependency.Retrofit2.ConverterGson.notation)
+
     implementation(Dependency.OkHttp3.Core.notation)
     implementation(Dependency.OkHttp3.LoggingInterceptor.notation)
+
+    implementation(Dependency.Hilt.Android.notation)
+    kapt(Dependency.Hilt.AndroidCompiler.notation)
+}
+
+kapt {
+    correctErrorTypes = true
 }
