@@ -1,6 +1,6 @@
 plugins {
     id("com.android.library")
-    kotlin(module="android")
+    kotlin(module = "android")
 }
 
 android {
@@ -33,4 +33,6 @@ android {
 }
 
 dependencies {
+    implementation(Dependency.Retrofit2.Core.notation)
+    implementation(Dependency.Retrofit2.ConverterGson.notation)
 }
