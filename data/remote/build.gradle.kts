@@ -35,4 +35,6 @@ android {
 dependencies {
     implementation(Dependency.Retrofit2.Core.notation)
     implementation(Dependency.Retrofit2.ConverterGson.notation)
+    implementation(Dependency.OkHttp3.Core.notation)
+    implementation(Dependency.OkHttp3.LoggingInterceptor.notation)
 }

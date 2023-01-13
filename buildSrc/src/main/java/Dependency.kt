@@ -29,4 +29,14 @@ sealed class Dependency(
 
         object ConverterGson : Retrofit2(name = "converter-gson")
     }
+
+    sealed class OkHttp3(private val name: String) : Dependency(
+        group = "com.squareup.okhttp3",
+        name = name,
+        version = "4.10.0"
+    ) {
+        object Core : OkHttp3(name = "okhttp")
+
+        object LoggingInterceptor : OkHttp3(name = "logging-interceptor")
+    }
 }
